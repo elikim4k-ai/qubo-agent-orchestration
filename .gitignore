@@ -1,0 +1,12 @@
+# environments
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# generated artifacts (reproducible via scripts/)
+demo_run/
+results/
+
+# stray brace-expansion accident (empty dirs; delete when convenient)
+{docs/

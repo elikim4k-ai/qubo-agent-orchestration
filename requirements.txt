@@ -1,0 +1,10 @@
+numpy>=1.26
+pulp>=2.8            # CBC exact backend
+pytest>=8.0
+pyyaml>=6.0          # vault front-matter
+jsonschema>=4.21     # telemetry + tool-call validation
+qiskit>=1.3          # QAOA backend (simulator); heavy but pinned by thesis
+scipy>=1.11          # COBYLA angle optimisation
+# optional:
+# qiskit-ibm-runtime  # QAOA on IBM hardware (SamplerV2 sessions)
+# mcp                 # MCP servers (vault + solver); libraries work without it

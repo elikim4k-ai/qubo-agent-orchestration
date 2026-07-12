@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HarnessTelemetryEvent",
+  "type": "object",
+  "required": ["ts", "agent_id", "task_id", "category", "event"],
+  "properties": {
+    "ts": {"type": "string", "format": "date-time"},
+    "agent_id": {"type": "string"},
+    "model_checkpoint": {"type": "string", "description": "pinned hash"},
+    "task_id": {"type": "string"},
+    "category": {"type": "string"},
+    "event": {"enum": ["step", "tool_call", "tool_repair", "task_done", "task_failed"]},
+    "tokens_prompt": {"type": "integer"},
+    "tokens_completion": {"type": "integer"},
+    "tool_call_valid": {"type": "boolean"},
+    "duration_ms": {"type": "integer"},
+    "outcome": {"enum": ["success", "failure", "timeout", null]}
+  }
+}
